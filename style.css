@@ -1,1 +1,112 @@
-body { font-family: Arial; background: #f2f2f2; text-align: center; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f5;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  user-select: none;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active,
+.screen:not(.hidden) {
+  display: block;
+}
+
+#login-screen input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+}
+
+#login-screen button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#parts-pool,
+#assembly-area {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  min-height: 250px;
+  background: white;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+}
+
+#parts-container,
+#assembly-container {
+  min-height: 200px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.part {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #888;
+  border-radius: 8px;
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  font-weight: bold;
+  user-select: none;
+}
+
+.part.dragging {
+  opacity: 0.6;
+  cursor: grabbing;
+}
+
+#hint-container {
+  margin-top: 15px;
+  min-height: 40px;
+  font-size: 16px;
+  color: #555;
+}
+
+#hintBtn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#score-container {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#explanation-screen {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+#explanation-screen button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
