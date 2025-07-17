@@ -1,1 +1,41 @@
-<!DOCTYPE html><html><head><title>Engine Game</title></head><body><h1>Engine Puzzle Game</h1><script src='script.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engine Assembly Puzzle Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Engine Assembly Puzzle Game</h1>
+  
+  <div id="login-screen" class="screen">
+    <input type="text" id="playerName" placeholder="Enter your name" maxlength="20" />
+    <button id="startBtn">Start Game</button>
+  </div>
+  
+  <div id="game-screen" class="screen hidden">
+    <div id="parts-pool">
+      <h2>Parts Pool</h2>
+      <div id="parts-container"></div>
+    </div>
+    <div id="assembly-area">
+      <h2>Assembly Area</h2>
+      <div id="assembly-container"></div>
+    </div>
+    
+    <div id="hint-container"></div>
+    <button id="hintBtn">Use Hint (2 max)</button>
+    
+    <div id="score-container">Score: 0</div>
+  </div>
+  
+  <div id="explanation-screen" class="screen hidden">
+    <h2>Combustion Cycle Explanation</h2>
+    <p id="explanation-text"></p>
+    <button id="play-again-btn">Play Again</button>
+  </div>
+  
+  <script src="script.js" defer></script>
+</body>
+</html>
